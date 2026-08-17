@@ -1,10 +1,12 @@
+[English](README.md) | [Français](README.fr.md)
+
 <p align="center">
-  <strong>Votre IA écrit comme une brochure. Faites-la écrire comme un manuel technique.</strong>
+  <strong>Your AI writes like a brochure. Make it write like a technical manual.</strong>
 </p>
 
 <p align="center">
-  Un skill pour produire une documentation technique en français clair, précis et cohérent.<br>
-  Il adapte au français les principes du langage contrôlé ASD-STE100.
+  A skill for producing clear, precise, and consistent technical documentation in French.<br>
+  It adapts the principles of the ASD-STE100 controlled language to French.
 </p>
 
 <p align="center">
@@ -13,29 +15,29 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-lightgrey?style=flat" alt="MIT"></a>
 </p>
 
-## Pourquoi
+## Why
 
-Les textes techniques générés par IA accumulent souvent les phrases longues, les synonymes inutiles et les formulations vagues. Français Simple impose des règles vérifiables :
+AI-generated technical texts often accumulate long sentences, unnecessary synonyms, and vague wording. Français Simple enforces verifiable rules:
 
-- 20 mots au maximum pour une instruction ;
-- 25 mots au maximum pour une description ;
-- une action par instruction ;
-- la condition avant l'action ;
-- la voix active et des temps simples ;
-- un seul terme pour chaque concept ;
-- aucun remplissage ou argument commercial.
+- a maximum of 20 words for an instruction;
+- a maximum of 25 words for a description;
+- one action per instruction;
+- the condition before the action;
+- active voice and simple tenses;
+- one term for each concept;
+- no filler or marketing claims.
 
-## Exemple
+## Example
 
-**Sans le skill :**
+**Without the skill:**
 
 > Une erreur inattendue est malheureusement survenue lors de la tentative de connexion. Veuillez vous assurer que vos identifiants ont été correctement configurés avant de réessayer.
 
-**Avec le skill :**
+**With the skill:**
 
 > La connexion à la base de données a échoué. Le mot de passe de l'utilisateur `app` est incorrect. Corrigez `DB_PASSWORD`, puis reconnectez-vous.
 
-Consultez d'autres réécritures dans [`examples/before-after.md`](examples/before-after.md).
+See more rewrites in [`examples/before-after.md`](examples/before-after.md).
 
 ## Installation
 
@@ -43,40 +45,40 @@ Consultez d'autres réécritures dans [`examples/before-after.md`](examples/befo
 npx skills add sachahjkl/FrancaisSimple
 ```
 
-Le skill suit le [standard Agent Skills](https://agentskills.io). Il fonctionne avec Claude Code, Cursor, Codex, Gemini CLI, OpenCode et les outils compatibles.
+The skill follows the [Agent Skills standard](https://agentskills.io). It works with Claude Code, Cursor, Codex, Gemini CLI, OpenCode, and compatible tools.
 
-Pour essayer le skill sans l'installer :
+To try the skill without installing it:
 
 ```bash
 npx skills use sachahjkl/FrancaisSimple --skill francais-simple
 ```
 
-Si votre outil ne prend pas en charge `SKILL.md`, utilisez [`prompts/system-prompt.md`](prompts/system-prompt.md).
+If your tool does not support `SKILL.md`, use [`prompts/system-prompt.md`](prompts/system-prompt.md).
 
-## Contenu
+## Contents
 
-- [`skills/francais-simple/SKILL.md`](skills/francais-simple/SKILL.md) : règles complètes ;
-- [`skills/francais-simple/references/checklist.md`](skills/francais-simple/references/checklist.md) : contrôle avant livraison ;
-- [`skills/francais-simple/references/use-cases.md`](skills/francais-simple/references/use-cases.md) : adaptations par type de texte ;
-- [`output-styles/francais-simple.md`](output-styles/francais-simple.md) : style de sortie Claude Code ;
-- [`prompts/system-prompt.md`](prompts/system-prompt.md) : prompt autonome ;
-- [`examples/before-after.md`](examples/before-after.md) : exemples complets.
-- [`NOTICE.md`](NOTICE.md) : origine du fork et portée de l'adaptation.
+- [`skills/francais-simple/SKILL.md`](skills/francais-simple/SKILL.md): complete rules;
+- [`skills/francais-simple/references/checklist.md`](skills/francais-simple/references/checklist.md): pre-delivery check;
+- [`skills/francais-simple/references/use-cases.md`](skills/francais-simple/references/use-cases.md): adaptations by text type;
+- [`output-styles/francais-simple.md`](output-styles/francais-simple.md): Claude Code output style;
+- [`prompts/system-prompt.md`](prompts/system-prompt.md): standalone prompt;
+- [`examples/before-after.md`](examples/before-after.md): complete examples.
+- [`NOTICE.md`](NOTICE.md): origin of the fork and scope of the adaptation.
 
-## Limites
+## Limitations
 
-L'ASD-STE100 définit le *Simplified Technical English*. Il ne définit pas de français technique simplifié. Ce projet reprend ses principes structurels et les adapte au français.
+ASD-STE100 defines *Simplified Technical English*. It does not define simplified technical French. This project takes its structural principles and adapts them to French.
 
-Le projet ne garantit donc aucune conformité ASD-STE100. Il ne remplace pas une validation humaine, terminologique, réglementaire ou métier.
+The project therefore does not guarantee ASD-STE100 compliance. It does not replace human, terminology, regulatory, or domain validation.
 
-## Inspiration et attribution
+## Inspiration and attribution
 
-Ce dépôt est un fork et une adaptation française de [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish), créé par AminBlg. La structure du skill, ses modes et plusieurs principes de contrôle proviennent de ce projet.
+This repository is a fork and French adaptation of [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish), created by AminBlg. The skill structure, its modes, and several control principles come from that project.
 
-Les benchmarks du projet original mesurent des textes anglais. Ils ont été retirés de cette adaptation, car leurs résultats ne s'appliquent pas au français.
+The original project's benchmarks measure English texts. They were removed from this adaptation because their results do not apply to French.
 
-## Licence
+## License
 
-Licence MIT. Le copyright et la licence du projet original sont conservés dans [`LICENSE`](LICENSE).
+MIT License. The original project's copyright and license are retained in [`LICENSE`](LICENSE).
 
-Projet non officiel, sans affiliation avec ASD ou STEMG. ASD-STE100 est une marque déposée d'ASD.
+Unofficial project with no affiliation with ASD or STEMG. ASD-STE100 is a registered trademark of ASD.

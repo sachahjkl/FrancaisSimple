@@ -1,24 +1,24 @@
 {
-  "name": "simple-english",
+  "name": "francais-simple",
   "owner": {
-    "name": "AminBlg",
-    "url": "https://github.com/AminBlg"
+    "name": "sachahjkl",
+    "url": "https://github.com/sachahjkl"
   },
-  "description": "ASD-STE100 Simplified Technical English skill for clear, unambiguous technical writing.",
+  "description": "Skill de rédaction technique en français clair, inspiré de SimpleEnglish et de l'ASD-STE100.",
   "plugins": [
     {
-      "name": "simple-english",
+      "name": "francais-simple",
       "source": "./",
-      "displayName": "Simple English",
-      "description": "Write or rewrite technical text with ASD-STE100 Simplified Technical English: short sentences, one word one meaning, active voice, condition before command.",
-      "version": "1.2.0",
+      "displayName": "Français Simple",
+      "description": "Rédige ou réécrit les textes techniques dans un français clair, court et cohérent.",
+      "version": "1.0.0",
       "author": {
-        "name": "AminBlg"
+        "name": "Contributeurs de Français Simple"
       },
-      "homepage": "https://github.com/AminBlg/SimpleEnglish",
-      "repository": "https://github.com/AminBlg/SimpleEnglish",
+      "homepage": "https://github.com/sachahjkl/FrancaisSimple",
+      "repository": "https://github.com/sachahjkl/FrancaisSimple",
       "license": "MIT",
-      "keywords": ["technical-writing", "documentation", "ste", "asd-ste100"]
+      "keywords": ["redaction-technique", "documentation", "francais", "langage-controle"]
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "name": "simple-english",
-  "displayName": "Simple English",
-  "description": "Write or rewrite technical text with ASD-STE100 Simplified Technical English: short sentences, one word one meaning, active voice, condition before command.",
-  "version": "1.2.0",
+  "name": "francais-simple",
+  "displayName": "Français Simple",
+  "description": "Rédige ou réécrit les textes techniques dans un français clair, court et cohérent.",
+  "version": "1.0.0",
   "author": {
-    "name": "AminBlg"
+    "name": "Contributeurs de Français Simple"
   },
-  "homepage": "https://github.com/AminBlg/SimpleEnglish",
-  "repository": "https://github.com/AminBlg/SimpleEnglish",
+  "homepage": "https://github.com/sachahjkl/FrancaisSimple",
+  "repository": "https://github.com/sachahjkl/FrancaisSimple",
   "license": "MIT",
-  "keywords": ["technical-writing", "documentation", "ste", "asd-ste100"]
+  "keywords": ["redaction-technique", "documentation", "francais", "langage-controle"]
 }

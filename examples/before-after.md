@@ -1,63 +1,55 @@
-# Before / after
+# Avant et après
 
-Every "before" below is genuine unedited AI output (Claude Sonnet, July 2026, no skill loaded). Every "after" is the same content with the skill applied.
+Ces exemples montrent l'adaptation française du skill.
 
-## 1. README introduction (descriptive)
+## Introduction de README
 
-**Before — 1 sentence of 30 words, one of 33, a dangling "-ing" clause:**
+**Avant :**
 
-> sqlpipe is a command-line tool for syncing PostgreSQL tables to Amazon S3 as Parquet files. It's built for teams who need a lightweight way to move data out of Postgres into a data lake without standing up a full ETL platform. sqlpipe connects directly to your database, reads table data in batches, converts it to columnar Parquet, and writes the result to an S3 bucket of your choosing. It supports full table snapshots as well as incremental syncs based on a watermark column, so you can run it once for a backfill or schedule it to run continuously. Configuration lives in a single YAML file, making it easy to version-control your sync definitions alongside the rest of your infrastructure code.
+> sqlpipe est un outil en ligne de commande robuste et performant permettant de synchroniser facilement vos tables PostgreSQL vers Amazon S3 sous forme de fichiers Parquet, sans avoir à mettre en place une plateforme ETL complète et complexe.
 
-**After — max sentence 21 words, one topic per paragraph:**
+**Après :**
 
-> sqlpipe is a command-line tool that copies PostgreSQL tables to Amazon S3 as Parquet files. It moves data into a data lake without a full ETL platform.
->
-> sqlpipe connects to your database and reads each table in batches. It converts the batches to Parquet and writes them to your S3 bucket. It can copy a full table, or only the new rows after a watermark column. Run it once for a backfill, or on a schedule.
->
-> The configuration is one YAML file. You can keep this file in version control with your infrastructure code.
+> sqlpipe copie des tables PostgreSQL vers Amazon S3 sous forme de fichiers Parquet. Il ne nécessite pas de plateforme ETL.
 
-## 2. Troubleshooting section (procedural)
+> sqlpipe lit les tables par lots. Il peut copier une table complète ou seulement les lignes ajoutées.
 
-**Before — 40-word sentences, contractions, conditions after commands:**
+## Dépannage
 
-> **Connection timeouts.** If sqlpipe hangs or fails with `dial tcp: i/o timeout`, check that the host running sqlpipe can reach the Postgres port (usually 5432) — this is often a security group or firewall rule blocking the connection. If you're connecting to a managed database (RDS, Cloud SQL, etc.), confirm the instance allows connections from sqlpipe's IP. You can also try increasing `source.connect_timeout_seconds` in your config, since a slow network path can trip the default timeout even when the connection eventually succeeds.
+**Avant :**
 
-**After — one instruction per sentence, condition first, one verb for "check":**
+> Vous pouvez essayer d'augmenter `source.connect_timeout_seconds` dans votre configuration si votre réseau est lent, afin d'éviter que le délai par défaut ne provoque une erreur.
 
-> **Connection timeouts.** sqlpipe stops with `dial tcp: i/o timeout` when it cannot reach the Postgres port (5432 by default).
->
-> 1. Make sure that the host that runs sqlpipe can reach the Postgres port. A firewall or security group usually blocks it.
-> 2. If the database is managed (RDS, Cloud SQL), make sure that the instance accepts connections from the IP of sqlpipe.
-> 3. If the network is slow, increase `source.connect_timeout_seconds` in the configuration.
+**Après :**
 
-## 3. Error message
+> Si le réseau est lent, augmentez `source.connect_timeout_seconds`. Cette valeur définit le délai de connexion.
 
-**Before:**
+## Message d'erreur
 
-> Oops! Something went wrong while attempting to establish a connection to the database. Please ensure your credentials have been properly configured and try again, or reach out to your administrator if the issue persists.
+**Avant :**
 
-**After:**
+> Oups ! Une erreur inattendue est malheureusement survenue lors de la tentative de connexion. Veuillez vérifier vos identifiants et réessayer.
 
-> Connection to the database failed: the password for user `app` was not correct.
-> Set `DB_PASSWORD` to the correct value, then connect again.
-> If the error continues, ask your database administrator for access.
+**Après :**
 
-## 4. Incident report (descriptive, simple past)
+> La connexion à la base de données a échoué. Le mot de passe de l'utilisateur `app` est incorrect. Corrigez `DB_PASSWORD`, puis reconnectez-vous.
 
-**Before:**
+## Rapport d'incident
 
-> We have identified an issue that may have impacted some users' ability to access the service. Our team has been working diligently to resolve this and services have now been fully restored. We sincerely apologize for any inconvenience this may have caused.
+**Avant :**
 
-**After:**
+> Nous avons identifié un problème qui a potentiellement affecté certains utilisateurs. Nos équipes ont travaillé activement pour rétablir complètement le service.
 
-> Between 14:02 and 14:31 UTC, 12% of requests to the API failed with HTTP 502. A deploy at 14:00 removed the cache warmup step, and the cache nodes overloaded. We reverted the deploy at 14:27. All requests succeeded from 14:31. We will add a warmup check to the deploy pipeline this week.
+**Après :**
 
-## 5. Breaking change in release notes
+> Entre 14 h 02 et 14 h 31 UTC, 12 % des requêtes ont échoué. Le déploiement de 14 h 00 a supprimé le préchauffage du cache. Nous avons annulé ce déploiement à 14 h 27.
 
-**Before:**
+## Rupture de compatibilité
 
-> Please note that we've made some changes to the users endpoint that may require updates to your integration. The `name` field has been deprecated in favor of separate `first_name` and `last_name` fields, so you'll want to update your code accordingly.
+**Avant :**
 
-**After:**
+> Veuillez noter que nous avons apporté des changements au point d'accès des utilisateurs. Vous devrez peut-être adapter votre intégration en conséquence.
 
-> **Breaking:** Update your calls to `/v2/users`. The `name` field split into `first_name` and `last_name`. The `name` field will return null after 2026-09-01.
+**Après :**
+
+> **Rupture :** Utilisez `/v2/users`. Remplacez `name` par `first_name` et `last_name`. Le champ `name` sera nul après le 1er septembre 2026.

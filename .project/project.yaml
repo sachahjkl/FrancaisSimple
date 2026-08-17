@@ -1,0 +1,9 @@
+name: "FrancaisSimple"
+description: "Skill de rédaction technique en français clair, inspiré de SimpleEnglish et de l'ASD-STE100."
+topics:
+  []
+homepage: ""
+source:
+  provider: github
+  namespace: "sachahjkl"
+  path: "sachahjkl/FrancaisSimple"

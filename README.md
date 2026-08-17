@@ -1,5 +1,3 @@
-[English](README.md) | [Français](README.fr.md)
-
 <p align="center">
   <strong>Your AI writes like a brochure. Make it write like a technical manual.</strong>
 </p>

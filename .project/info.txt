@@ -1,0 +1,2 @@
+name=FrancaisSimple
+description=Skill de rédaction technique en français clair, inspiré de SimpleEnglish et de l'ASD-STE100.
